@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+
+        <title>Result</title>
+    </head>
+    <body class="p-3 mb-2 bg-light text-black">
+        <div class="container justify-content-center w-50 p-3" style="margin-top: 5em;">
+            <div id="login-error-msg" th:if="${login}" class="alert alert-danger fill-parent">
+                <span th:text="${login}"></span><span>Click <a class="loginLink" href="/login">here</a> to login.</span>
+            </div>
+            <div id="home-error-msg" th:if="${home}" class="alert alert-danger fill-parent">
+                <span th:text="${home}"></span><span>Click <a class="homeLink" href="/home">here</a> to go back to home page.</span>
+            </div>
+            <div id="file-success-msg" th:if="${fileSuccess}" class="alert alert-success fill-parent">
+                <span th:text="${fileSuccess}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+            <div id="file-error-msg" th:if="${fileError}" class="alert alert-danger fill-parent">
+                <span th:text="${fileError}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+            <div id="note-success-msg" th:if="${noteSuccess}" class="alert alert-success fill-parent">
+                <span th:text="${noteSuccess}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+            <div id="note-error-msg" th:if="${noteError}" class="alert alert-danger fill-parent">
+                <span th:text="${noteError}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+            <div id="credential-success-msg" th:if="${credentialSuccess}" class="alert alert-success fill-parent">
+                <span th:text="${credentialSuccess}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+            <div id="credential-error-msg" th:if="${credentialError}" class="alert alert-danger fill-parent">
+                <span th:text="${credentialError}"></span><span>Click <a class="homeLink" href="/home">here</a> to continue.</span>
+            </div>
+        </div>
+    </body>
+</html>
